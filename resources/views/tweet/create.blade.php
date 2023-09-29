@@ -10,7 +10,7 @@
       <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
         <div class="p-6 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-800 ">
           @include('common.errors')
-          <form class="mb-6" action="{{ route('tweet.store') }}" method="POST">
+          <form class="mb-6" action="{{ route('tweet.store') }}" method="POST"enctype="multipart/form-data">
             @csrf
             <div class="flex flex-col mb-4">
               <x-input-label for="tweet" :value="__('Tweet')" />

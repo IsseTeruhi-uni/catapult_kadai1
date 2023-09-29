@@ -25,6 +25,8 @@
                       <p class="text-left text-gray-dark dark:text-gray-200">{{$tweet->user->name}}</p>
                     </a>
                     <!-- 🔼 ここまで -->
+                    <!--自分をフォローできなくする(ボタン)-->
+                    @if($tweet->user->id!== Auth::user()->id)
                     <!-- follow 状態で条件分岐 -->
                     @if(Auth::user()->followings()->where('users.id', $tweet->user->id)->exists())
                     <!-- unfollow ボタン -->
@@ -48,6 +50,7 @@
                         {{ $tweet->user->followers()->count() }}
                       </x-primary-button>
                     </form>
+                    @endif
                     @endif
                   </div>
                   <a href="{{ route('tweet.show',$tweet->id) }}">
