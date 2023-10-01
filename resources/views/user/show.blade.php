@@ -10,6 +10,13 @@
       <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
         <div class="p-6 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-800">
           <div class="mb-6">
+            <div class="mr-3">
+              <img
+               id="preview"
+               src="{{ $user->profile_photo_path!=null ? asset('storage/' . $user->profile_photo_path) : asset('storage/user_icon.png') }}"
+               alt=""
+               class="w-16 h-16 rounded-full object-cover border-none bg-gray-200">
+            </div>
             <div class="flex flex-col mb-4">
               <p class="mb-2 uppercase font-bold text-lg text-gray-800 dark:text-gray-200">Name</p>
               <p class="py-2 px-3 text-gray-800 dark:text-gray-200" id="name">
