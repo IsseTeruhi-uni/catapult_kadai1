@@ -42,3 +42,5 @@ dec2023phase0100_13.mp4
 ## Phase01 終えての感想
 
 多少苦戦した点、トラブルもあったが無事に実装できてよかった。
+
+[![wakatime](https://wakatime.com/badge/github/IsseTeruhi-uni/catapult_kadai1.svg)](https://wakatime.com/badge/github/IsseTeruhi-uni/catapult_kadai1)
